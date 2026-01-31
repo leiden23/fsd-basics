@@ -3,14 +3,16 @@ import styles from './style.module.css';
 import clsx from 'clsx';
 
 type RowProps = HTMLAttributes<HTMLDivElement> & {
-    gap: number;
+    gap?: number;
     height?: string | number;
     width?: string | number;
+    justifyContent?: 'flex-end' | 'flex-start' | 'center' | 'space-between';
+    alignItems?: 'flex-end' | 'flex-start' | 'center';
 }
 
-export const Row: FC<RowProps> = ({gap, children, width, height, style, ...props}) => {
+export const Row: FC<RowProps> = ({gap, children, width, height, style, justifyContent, alignItems, ...props}) => {
     return (
-        <div {...props} style={{gap, height, width, ...style}} className={clsx(styles.div, props.className)}>
+        <div {...props} style={{gap, height, width, justifyContent, alignItems, ...style}} className={clsx(styles.div, props.className)}>
             {children}
         </div>
     )

@@ -1,7 +1,5 @@
 .header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 88px;
-    background-color: green;
+    background-color: bisque;
+    height: 100vh;
+    padding: 35px 38px 0 44px;
 }

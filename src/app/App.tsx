@@ -1,6 +1,9 @@
+import { Button } from "../shared/ui/button/button"
 import { Card } from "../shared/ui/card"
 import { Column } from "../shared/ui/column"
 import { Row } from "../shared/ui/row"
+// import { Column } from "../shared/ui/column"
+// import { Row } from "../shared/ui/row"
 import { Header } from "../widgets/header"
 
 
@@ -8,8 +11,19 @@ function App() {
 
     return (
         <div>
-            <Header/>
-            <Column gap={5}>
+            <Row gap={216}>
+                <Header/>
+                <Column gap={38} alignItems="center">
+                    <Column style={{marginTop:'144px'}} gap={28}>
+                        <Card width={180} height={120} children={'карточка'}/>
+                        <Card width={180} height={120} children={'карточка'}/>
+                        <Card width={180} height={120} children={'карточка'}/>
+                    </Column>
+                    <Button variant="filled" color="none" size="none">Генерация</Button>
+                </Column>
+            </Row>
+        </div>
+            /* <Column gap={5}>
                 <div style={{width: 200, height: 44, backgroundColor: 'red'}}/>
                 <div style={{width: 200, height: 44, backgroundColor: 'red'}}/>
                 <div style={{width: 200, height: 44, backgroundColor: 'red'}}/>
@@ -29,8 +43,7 @@ function App() {
             </Card>
             <Card radius={20} padding={20}>
                 <div></div>
-            </Card>
-        </div>
+            </Card> */
     )
 }
 

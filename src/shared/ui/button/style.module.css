@@ -1,0 +1,49 @@
+.button {
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+}
+
+.text {
+    background-color: transparent;
+}
+
+.filled {
+    background-color: #DECEB4;
+    border-radius: 15px;
+    padding: 5px 24px;
+    width: 180px;
+    height: 35px;
+}
+
+.outlined {
+
+}
+
+.beige {
+
+}
+
+.danger {
+
+}
+
+.gray {
+
+}
+
+.white {
+
+}
+
+.small {
+
+}
+
+.medium {
+
+}
+
+.large {
+
+}

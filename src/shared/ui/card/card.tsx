@@ -1,14 +1,15 @@
-import type { FC, HTMLAttributes } from "react"
+import type { FC } from "react"
 import styles from './style.module.css'
 
-type CardProps = HTMLAttributes<HTMLDivElement> & {
-    radius?: number;
-    padding?: number | string;
+type CardProps = {
+    width: string | number;
+    height: string | number;
+    children: string | number;
 }
-
-export const Card: FC<CardProps> = ({radius, padding, style, children, ...props}) => {
+// полупрозрачная карточка с радиусом 15
+export const Card: FC<CardProps> = ({children, width, height}) => {
     return (
-        <div {...props} style={{borderRadius: radius, padding, ...style}} className={styles.div}>
+        <div className={styles.card} style={{width, height}}>
             {children}
         </div>
     )
