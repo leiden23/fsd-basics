@@ -4,7 +4,7 @@ import styles from './style.module.css'
 type CardProps = {
     width: string | number;
     height: string | number;
-    children: string | number;
+    children?: string | number;
 }
 // полупрозрачная карточка с радиусом 15
 export const Card: FC<CardProps> = ({children, width, height}) => {
@@ -14,6 +14,3 @@ export const Card: FC<CardProps> = ({children, width, height}) => {
         </div>
     )
 }
-
-
-// - сделать компонент Card с пропсами радиус углов, padding, children, разместить по FSD

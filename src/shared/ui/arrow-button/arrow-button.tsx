@@ -1,14 +1,15 @@
-import type { FC } from "react";
+import clsx from "clsx";
+import type { ButtonHTMLAttributes, FC } from "react";
+import styles from './style.module.css'
 
-type ArrowButtonProps = {
-    variant: 'rounded' | 'triangle';
-    direction: 'left' | 'right';
+type ArrowButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    variant: 'rounded-left' | 'rounded-right' | 'triangle-left' | 'triangle-right';
 }
 
-export const ArrowButton: FC<ArrowButtonProps> = () => {
+export const ArrowButton: FC<ArrowButtonProps> = ({variant, className, children, ...props}) => {
     return (
-        <div>
-            
-        </div>
+        <button {...props} className={clsx(styles.button, styles[variant], className)}>
+            {children}
+        </button>
     )
 }

@@ -1,5 +1,7 @@
 .header {
-    background-color: bisque;
+    position: absolute;
+    background-color: rgba(217, 217, 217, 0.6);
     height: 100vh;
     padding: 35px 38px 0 44px;
+    margin-left: 80px;
 }

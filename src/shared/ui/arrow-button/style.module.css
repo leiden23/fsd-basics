@@ -1,0 +1,36 @@
+.button {
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+}
+
+.rounded-left {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100%;
+    background: url('/arrow-left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rounded-right {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100%;
+    background: url('/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.triangle-left {
+    width: 25px;
+    height: 42px;
+    background: url('/triangle-left.svg');
+}
+.triangle-right {
+    width: 25px;
+    height: 42px;
+    background: url('/triangle-right.svg');
+}
