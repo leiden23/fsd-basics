@@ -4,5 +4,9 @@
     background-image: url('/bg.png');
     background-size: contain;
     background-repeat: no-repeat;
-
+    
 }
+
+.wardrobeContainer {
+    margin-left: 516px;
+} 

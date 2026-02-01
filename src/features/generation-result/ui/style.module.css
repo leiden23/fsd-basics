@@ -1,0 +1,9 @@
+.result {
+    background-color: rgba(192, 183, 164, 0.62);
+}
+.window {
+    width: 210px;
+    height: 570px;
+    display: flex;
+    justify-content: center;
+}

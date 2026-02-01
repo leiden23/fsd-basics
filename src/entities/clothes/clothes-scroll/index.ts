@@ -1,0 +1,1 @@
+export {ClothesScroll} from './ui'
