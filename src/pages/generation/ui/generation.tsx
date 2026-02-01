@@ -8,7 +8,7 @@ export const GenerationPage: FC = () => {
     return (
         <div className={styles.page}>
             <div className={styles.wardrobeContainer}>
-                <Row gap={208} >
+                <Row gap={207} >
                     <GenerationPanel />
                     <GenerationResult />
                 </Row>

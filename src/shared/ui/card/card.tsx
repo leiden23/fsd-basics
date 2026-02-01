@@ -1,15 +1,19 @@
-import type { FC } from "react"
+import type { CSSProperties, FC } from "react"
 import styles from './style.module.css'
+import clsx from "clsx";
 
 type CardProps = {
     width: string | number;
     height: string | number;
-    children?: string | number;
+    children?: React.ReactNode;
+    style?: CSSProperties;
+    className?: string;
+    justifyContent?: 'flex-end' | 'flex-start' | 'center' | 'space-between';
+    alignItems?: 'flex-end' | 'flex-start' | 'center';
 }
-// полупрозрачная карточка с радиусом 15
-export const Card: FC<CardProps> = ({children, width, height}) => {
+export const Card: FC<CardProps> = ({children, width, height, alignItems, justifyContent, style, className}) => {
     return (
-        <div className={styles.card} style={{width, height}}>
+        <div className={clsx(styles.card, className)} style={{width, height, alignItems, justifyContent, ...style}}>
             {children}
         </div>
     )
