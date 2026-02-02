@@ -1,6 +1,6 @@
 import type { FC, HTMLAttributes } from "react"
-import styles from './style.module.css'
 import clsx from "clsx"
+import styles from './style.module.css'
 
 type ColumnProps = HTMLAttributes<HTMLDivElement> & {
     gap?: number;

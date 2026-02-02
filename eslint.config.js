@@ -3,30 +3,30 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
-import { globalIgnores } from 'eslint/config'
 import importPlugin from 'eslint-plugin-import'
 
-
 export default tseslint.config([
-  globalIgnores(['dist']),
+  { ignores: ['dist'] },
   {
     files: ['**/*.{ts,tsx}'],
+    plugins: {
+      import: importPlugin,
+    },
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
-      importPlugin.configs.recommended,
-      importPlugin.configs.typescript,
     ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     rules: {
-      'no-console': 'warn',  // Предупреждение на console.log
-      'no-debugger': 'error', // Ошибка на debugger
+      'no-console': 'warn',
+      'no-debugger': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
+      'import/order': 'warn',
     }
   },
 ])

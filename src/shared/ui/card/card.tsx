@@ -1,6 +1,6 @@
 import type { CSSProperties, FC } from "react"
-import styles from './style.module.css'
 import clsx from "clsx";
+import styles from './style.module.css'
 
 type CardProps = {
     width: string | number;

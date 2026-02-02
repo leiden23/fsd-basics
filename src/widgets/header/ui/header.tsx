@@ -1,7 +1,7 @@
 import type { FC } from "react"
-import styles from './style.module.css'
-import { Column } from "../../../shared/ui/column"
 import { NavLink } from "react-router-dom"
+import { Column } from "../../../shared/ui/column"
+import styles from './style.module.css'
 
 
 export const Header: FC = () => {

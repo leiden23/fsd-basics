@@ -1,5 +1,5 @@
-import { Card } from "@/shared"
 import type { CSSProperties, FC } from "react"
+import { Card } from "@/shared"
 
 type WardrobeCardProps = {
     imageSrc?: string;

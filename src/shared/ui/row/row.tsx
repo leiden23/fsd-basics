@@ -1,6 +1,6 @@
 import { type FC, type HTMLAttributes } from "react";
-import styles from './style.module.css';
 import clsx from 'clsx';
+import styles from './style.module.css';
 
 type RowProps = HTMLAttributes<HTMLDivElement> & {
     gap?: number;

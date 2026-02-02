@@ -1,7 +1,7 @@
-import { WardrobeCard } from "@/entities/clothes/wardrobe-card"
-import { ArrowButton, Button, Column, Row } from "@/shared"
 import type { FC } from "react"
 import styles from './style.module.css'
+import { WardrobeCard } from "@/entities/clothes/wardrobe-card"
+import { ArrowButton, Button, Column, Row } from "@/shared"
 
 export const WardrobePanel: FC = () => {
     const array = Array(16).fill({

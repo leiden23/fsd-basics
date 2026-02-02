@@ -1,6 +1,6 @@
 import type { FC } from "react"
-import { Button, Column } from "@/shared"
 import styles from './style.module.css'
+import { Button, Column } from "@/shared"
 
 type GenerationResultProps = {
     children?: React.ReactNode;
