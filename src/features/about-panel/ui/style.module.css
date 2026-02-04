@@ -1,0 +1,14 @@
+.bookPanel {
+    margin-top: 263px;
+    margin-left: 395px;
+    width: 772px;
+    height: 470px;
+    display: flex;
+    gap: 52px;
+}
+
+.bookPage {
+    width: 360px;
+    font-family: 'Soyuz Grotesk';
+    font-size: 12px;
+}

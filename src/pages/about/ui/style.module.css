@@ -1,0 +1,9 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/img/bg-about.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden; /*чтобы .bookPanel из AboutPanel не срабатывал на .page из-за margin collapse*/
+}
+

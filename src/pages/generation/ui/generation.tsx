@@ -7,12 +7,10 @@ import { Row } from "@/shared";
 export const GenerationPage: FC = () => {
     return (
         <div className={styles.page}>
-            <div className={styles.wardrobeContainer}>
-                <Row gap={207} >
-                    <GenerationPanel />
-                    <GenerationResult />
-                </Row>
-            </div>
+            <Row gap={207} >
+                <GenerationPanel />
+                <GenerationResult />
+            </Row>
         </div>
     )
 }
