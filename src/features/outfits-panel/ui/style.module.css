@@ -1,0 +1,68 @@
+.buttonPanel {
+    position: absolute;
+    top: 796px;
+    left:  868px;
+}
+
+.card1 {
+    position: absolute;
+    left: 405px;
+    top: 164px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card2 {
+    position: absolute;
+    left: 619px;
+    top: 174px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card3 {
+    position: absolute;
+    left: 824px;
+    top: 180px;
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
+.card4 {
+    position: absolute;
+    left: 1034px;
+    top: 177px;
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
+.card5 {
+    position: absolute;
+    left: 1236px;
+    top: 176px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card6 {
+    position: absolute;
+    left: 426px;
+    top: 539px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card7 {
+    position: absolute;
+    left: 627px;
+    top: 546px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card8 {
+    position: absolute;
+    left: 828px;
+    top: 549px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card9 {
+    position: absolute;
+    left: 1036px;
+    top: 547px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.card10 {
+    position: absolute;
+    left: 1234px;
+    top: 548px;
+    background-color: rgba(255, 255, 255, 0.25);
+}

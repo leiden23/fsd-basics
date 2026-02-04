@@ -1,0 +1,1 @@
+export {OutfitsCard} from './ui'

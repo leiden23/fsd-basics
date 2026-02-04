@@ -11,7 +11,7 @@ export const Header: FC = () => {
             <Column gap={20}>
                 <NavLink to='/generation' className={styles.link}>Генерация</NavLink>
                 <NavLink to='/wardrobe' className={styles.link}>Гардероб</NavLink>
-                <NavLink to='/images' className={styles.link}>Образы</NavLink>
+                <NavLink to='/outfits' className={styles.link}>Образы</NavLink>
                 <NavLink to='/about' className={styles.link}>О проекте</NavLink>
             </Column>
         </Column>
