@@ -5,13 +5,15 @@ import { WardrobePage } from "@/pages/wardrobe"
 import { OutfitsPage } from "@/pages/outfits"
 import { AboutPage } from "@/pages/about"
 import { RegistrationPage } from "@/pages/registration/ui/registration"
+import { AuthorizationPage } from "@/pages/authorization"
 
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<RegistrationPage/>} />
+                <Route path="/reg" element={<RegistrationPage/>} />
+                <Route path="/auth" element={<AuthorizationPage/>} />
             </Routes>
             <Header />
             <Routes>

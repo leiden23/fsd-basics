@@ -1,4 +1,5 @@
 import type { FC } from "react"
+import { NavLink } from "react-router-dom"
 import styles from './style.module.css'
 import { Button, Card, Column, Input, Row } from "@/shared"
 
@@ -16,7 +17,9 @@ export const RegistrationForm: FC = () => {
                     </Column>
                 </Column>
                 <Row gap={21}>
-                    <Button variant="outlined-white" size="medium">Войти</Button>
+                    <NavLink to='/auth'>
+                        <Button variant="outlined-white" size="medium">Войти</Button>
+                    </NavLink>
                     <Button variant="outlined-white" className={styles.signUpButton}>Зарегестрироваться</Button>
                 </Row>
             </Column>

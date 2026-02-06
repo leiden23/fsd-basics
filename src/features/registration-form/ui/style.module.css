@@ -1,12 +1,11 @@
 .logo {
+    font-family: 'Soyuz Grotesk';
     font-size: 40px;
     letter-spacing: 0.1em;
 }
 
 .form {
-    padding: 20px 57px 30px 47px;
-    /* margin-top: 238px; */
-    /* margin-left: 445; */
+    padding: 20px 47px 30px 47px;
 }
 
 .signUpButton {
