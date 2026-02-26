@@ -8,7 +8,7 @@ import styles from './style.module.css'
 import { Button, Card, Column, Input, Row } from "@/shared"
 import { useUser } from "@/entities/user/model/model"
 
-type FormData = z.infer<typeof schema> //= type FormData = { name: string; email: string; password: string; password2: string; }
+type AuthRequest = z.infer<typeof schema> //= type AuthRequest = { name: string; email: string; password: string; password2: string; }
 
 export const RegistrationForm = () => {
     const { setUser } = useUser();
@@ -18,12 +18,12 @@ export const RegistrationForm = () => {
         register, 
         handleSubmit, 
         formState: { errors }
-    } = useForm<FormData>({
+    } = useForm<AuthRequest>({
         resolver: zodResolver(schema),
         mode: 'onTouched',
     });
 
-    const onSubmit = async (data: FormData) => {
+    const onSubmit = async (data: AuthRequest) => {
         const { user, error } = await registerUser({ name: data.name, email: data.email, password: data.password });
         if (user) {
             setUser(user);

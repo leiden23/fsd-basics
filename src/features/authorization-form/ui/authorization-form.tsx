@@ -9,7 +9,7 @@ import styles from './style.module.css'
 import { Button, Card, Column, Input, Row } from "@/shared";
 import { useUser } from "@/entities/user/model/model";
 
-type FormData = z.infer<typeof schema>
+type AuthRequest = z.infer<typeof schema>
 
 export const AuthorizationForm: FC = () => {
     const { setUser } = useUser();
@@ -19,12 +19,12 @@ export const AuthorizationForm: FC = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<FormData>({
+    } = useForm<AuthRequest>({
         resolver: zodResolver(schema),
         mode: "onTouched",
     })
 
-    const onSubmit = async (data: FormData) => {
+    const onSubmit = async (data: AuthRequest) => {
         const {user, error} = await signIn({email: data.email, password: data.password})
         if (user) {
             setUser(user);
