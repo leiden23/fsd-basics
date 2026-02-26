@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod";
@@ -7,12 +7,13 @@ import { schema } from "../lib/schema";
 import { signIn } from "../api/signIn";
 import styles from './style.module.css'
 import { Button, Card, Column, Input, Row } from "@/shared";
-import { useAuth } from "@/entities/user";
+import { useUser } from "@/entities/user/model/model";
 
 type FormData = z.infer<typeof schema>
 
 export const AuthorizationForm: FC = () => {
-    const { setIsAuth } = useAuth();
+    const { setUser } = useUser();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -23,11 +24,16 @@ export const AuthorizationForm: FC = () => {
         mode: "onTouched",
     })
 
-    const onSubmit = (data: FormData) => {
-        signIn({email: data.email, password: data.password})
-        setIsAuth(true);
+    const onSubmit = async (data: FormData) => {
+        const {user, error} = await signIn({email: data.email, password: data.password})
+        if (user) {
+            setUser(user);
+            navigate('/generation');
+        } else {
+            // eslint-disable-next-line no-console
+            console.error(error)
+        }
     }
-
     return (
         <Card className={styles.form} alignItems='center' justifyContent="center">
             <Column gap={20} >

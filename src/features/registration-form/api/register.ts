@@ -16,7 +16,5 @@ export const registerUser = async ({email, password, name}: registerUserType) =>
             }
         },
     })
-    // eslint-disable-next-line no-console
-    console.log(data, error);
-    // TODO:
+    return {user: data.user, error}
 }

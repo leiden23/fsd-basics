@@ -7,7 +7,6 @@ import { OutfitsPage } from "@/pages/outfits"
 import { AboutPage } from "@/pages/about"
 import { RegistrationPage } from "@/pages/registration/ui/registration"
 import { AuthorizationPage } from "@/pages/authorization"
-import { AuthProvider } from "@/entities/user"
 
 const AppLayout = () => (
     <>
@@ -19,7 +18,6 @@ const AppLayout = () => (
 function App() {
 
     return (
-        <AuthProvider>
             <BrowserRouter>
                 <Routes>
                     <Route path="/reg" element={<RegistrationPage />} />
@@ -32,7 +30,6 @@ function App() {
                     </Route>
                 </Routes>
             </BrowserRouter>
-        </AuthProvider>
     )
 }
 

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -6,13 +6,13 @@ import { registerUser } from "../api/register"
 import { schema } from "../lib/schema"
 import styles from './style.module.css'
 import { Button, Card, Column, Input, Row } from "@/shared"
-import { useAuth } from "@/entities/user"
-
+import { useUser } from "@/entities/user/model/model"
 
 type FormData = z.infer<typeof schema> //= type FormData = { name: string; email: string; password: string; password2: string; }
 
 export const RegistrationForm = () => {
-    const { setIsAuth } = useAuth()
+    const { setUser } = useUser();
+    const navigate = useNavigate();
 
     const { 
         register, 
@@ -23,9 +23,15 @@ export const RegistrationForm = () => {
         mode: 'onTouched',
     });
 
-    const onSubmit = (data: FormData) => {
-        registerUser({ name: data.name, email: data.email, password: data.password });
-        setIsAuth(true);
+    const onSubmit = async (data: FormData) => {
+        const { user, error } = await registerUser({ name: data.name, email: data.email, password: data.password });
+        if (user) {
+            setUser(user);
+            navigate('/generation');
+        } else {
+            // eslint-disable-next-line no-console
+            console.error(error);
+        }
     }
 
     return (

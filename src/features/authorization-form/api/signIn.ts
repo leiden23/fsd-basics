@@ -10,7 +10,5 @@ export const signIn = async ({email, password}: signInType) => {
         email,
         password,
     })
-    // eslint-disable-next-line no-console
-    console.log(data, error)
-    // TODO:
+    return {user: data.user, error: error};
 }
