@@ -1,12 +1,12 @@
 import { supabase } from "@/shared/api/supabase"
 
-type RegisterType = {
+type RegisterUserRequest= {
     email: string,
     password: string,
     name: string,
 }
 
-export const register = async ({email, password, name}: RegisterType) => {
+export const registerUser = async ({email, password, name}: RegisterUserRequest) => {
     const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -16,7 +16,5 @@ export const register = async ({email, password, name}: RegisterType) => {
             }
         },
     })
-    // eslint-disable-next-line no-console
-    console.log(data, error);
-    // TODO:
+    return {user: data.user, error}
 }

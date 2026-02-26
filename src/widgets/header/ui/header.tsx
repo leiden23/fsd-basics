@@ -3,19 +3,20 @@ import { NavLink } from "react-router-dom"
 import { Column } from "../../../shared/ui/column"
 import styles from './style.module.css'
 import { Button } from "@/shared"
-import { useAuth } from "@/entities/user"
+import { useUser } from "@/entities/user/model/model"
 
 export const Header: FC = () => {
-    const {setIsAuth} = useAuth();
+    const { setUser } = useUser();
 
     const logout = () => {
-        setIsAuth(false)
-        localStorage.removeItem('auth')        
+        setUser(null)
+
     }
 
     return (
         <Column gap={65} className={styles.header} width={254}>
             <h1 className={styles.logo}>outfitly</h1>
+
             <Column gap={20}>
                 <NavLink to='/generation' className={styles.link}>Генерация</NavLink>
                 <NavLink to='/wardrobe' className={styles.link}>Гардероб</NavLink>
