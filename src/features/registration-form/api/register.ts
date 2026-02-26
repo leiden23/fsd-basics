@@ -1,12 +1,12 @@
 import { supabase } from "@/shared/api/supabase"
 
-type registerUserType = {
+type RegisterUserRequest= {
     email: string,
     password: string,
     name: string,
 }
 
-export const registerUser = async ({email, password, name}: registerUserType) => {
+export const registerUser = async ({email, password, name}: RegisterUserRequest) => {
     const { data, error } = await supabase.auth.signUp({
         email,
         password,
