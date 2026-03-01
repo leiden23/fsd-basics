@@ -10,7 +10,7 @@ type WardrobeCardProps = {
 export const WardrobeCard: FC<WardrobeCardProps> = ({ imageSrc, ...props }) => {
     return (
         <Card {...props} width={153} height={103} justifyContent="center" alignItems="center" >
-            <img src={imageSrc} alt="Карточка с одеждой"/>
+            <img src={imageSrc} alt="Карточка с одеждой" height='100%'/>
         </Card>
     )
 }
