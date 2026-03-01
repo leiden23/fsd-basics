@@ -4,13 +4,14 @@ import { Column } from "../../../shared/ui/column"
 import styles from './style.module.css'
 import { Button } from "@/shared"
 import { useUser } from "@/entities/user/model/model"
+import { supabase } from "@/shared/api/supabase"
 
 export const Header: FC = () => {
     const { setUser } = useUser();
 
-    const logout = () => {
+    const logout = async () => {
+        await supabase.auth.signOut()
         setUser(null)
-
     }
 
     return (
